@@ -1,7 +1,7 @@
 # Rubiks Cube Solver With Computer Vision
 Given an image of each face of a Rubik's cube, detect the cube, classify its stickers' colors, and output a solution algorithm.
 
-## Instructions
+## Overview
 - There are two ways of running this program:
     - Use the detector program to determine the cube configuration and pass it on to the solver program (auto scramble)
     - Input your own scramble algorithm to the solver program (manual scramble)
