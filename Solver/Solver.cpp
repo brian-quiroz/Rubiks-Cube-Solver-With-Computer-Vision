@@ -285,7 +285,7 @@ void Solver::identifyPieces(char** c) {
 		}
 	}
 
-	//Delete cube2
+	//Delete original cube to be replaced with cube2
 	for (int i = 0; i < 9; i++) {
 		for (int j = 0; j < 12; j++) {
 			delete cube[i][j];
@@ -296,14 +296,15 @@ void Solver::identifyPieces(char** c) {
 	}
 	delete[] cube;
 
+	//Now cube2 with the new values is what "cube" points to
 	cube = cube2;
 }
 
 std::pair<int,int> Solver::identifyCorner(std::vector<char> givenCorner) {
 	std::vector<std::vector<char>> corners = {{'Y', 'O', 'G'}, {'Y', 'R', 'G'},
-	 																					{'Y', 'O', 'B'}, {'Y', 'B', 'R'},
-																						{'W', 'O', 'B'}, {'W', 'B', 'R'},
-																						{'W', 'O', 'G'}, {'W', 'R', 'G'}};
+						  {'Y', 'O', 'B'}, {'Y', 'B', 'R'},
+						  {'W', 'O', 'B'}, {'W', 'B', 'R'},
+						  {'W', 'O', 'G'}, {'W', 'R', 'G'}};
 
 	int i = 0;
 	for (const auto& corner : corners) {
@@ -330,8 +331,8 @@ std::pair<int,int> Solver::identifyCorner(std::vector<char> givenCorner) {
 
 std::pair<int,int> Solver::identifyEdge(std::vector<char> givenEdge) {
 	std::vector<std::vector<char>> edges = {{'Y', 'G'}, {'Y', 'O'}, {'Y', 'R'}, {'Y', 'B'},
-																					{'W', 'B'}, {'W', 'O'}, {'W', 'R'}, {'W', 'G'},
-																					{'O', 'G'}, {'B', 'O'}, {'R', 'B'}, {'G', 'R'}};
+						{'W', 'B'}, {'W', 'O'}, {'W', 'R'}, {'W', 'G'},
+						{'O', 'G'}, {'B', 'O'}, {'R', 'B'}, {'G', 'R'}};
 
 	int i = 0;
 	for (const auto& edge : edges) {
