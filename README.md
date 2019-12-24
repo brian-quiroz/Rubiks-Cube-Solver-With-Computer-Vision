@@ -10,13 +10,13 @@ Given an image of each face of a Rubik's cube, detect the cube, classify its sti
 Note: An example image set is provided. To run a sample run, skip steps 1-3.
 
 #### 1. Take 6 images of a Rubik's cube, one of each side, and name each face's picture according to the following convention:
-    - yellow face: Img1.jpg
-    - orange face: Img2.jpg
-    - blue face: Img3.jpg
-    - red face: Img4.jpg
-    - green face: Img5.jpg
-    - white face: Img6.jpg  
-  For optimal detection, the pictures should be taken very close to the cube, with little to no background noise, and under good lighting (see example images on Detector/Images/ExampleSet). To learn more about the robustness of the detector algorithm please refer to the documentation for the detector under the Further Documentation section.
+- yellow face: Img1.jpg
+- orange face: Img2.jpg
+- blue face: Img3.jpg
+- red face: Img4.jpg
+- green face: Img5.jpg
+- white face: Img6.jpg  
+For optimal detection, the pictures should be taken very close to the cube, with little to no background noise, and under good lighting (see example images on Detector/Images/ExampleSet). To learn more about the robustness of the detector algorithm please refer to the documentation for the detector under the Further Documentation section.
 
 #### 2. Store the folder containing these images under Detector/Images.
 
