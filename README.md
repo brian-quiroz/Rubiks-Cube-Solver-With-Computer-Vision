@@ -7,6 +7,8 @@ Given an image of each face of a Rubik's cube, detect the cube, classify its sti
     - Input your own scramble algorithm to the solver program (manual scramble)
 
 ## Auto Scramble
+Note: An example image set is provided. To run a sample run, skip steps 1-3.
+
 1. Take 6 images of a Rubik's cube, one of each side, and name each face's picture according to the following convention:
     - yellow face: Img1.jpg
     - orange face: Img2.jpg
@@ -14,12 +16,14 @@ Given an image of each face of a Rubik's cube, detect the cube, classify its sti
     - red face: Img4.jpg
     - green face: Img5.jpg
     - white face: Img6.jpg
+    For optimal detection, the pictures should be taken very close to the cube, with little to no background noise, and under good lighting (see example images on Detector/Images/ExampleSet). To learn more about the robustness of the detector algorithm please refer to the documentation for the detector under the Further Documentation section.
 
 2. Store the folder containing these images under Detector/Images.
 
 3. Go to Detector/CVRubiksCube.m and change "ExampleSet" on line 2 for your folder's name.
 
 4. Open MATLAB and run the CVRubiksCube.m script in the Detector folder. This should create a file called "stickers.txt" in that folder.
+    If the cube cannot be detected correctly, an error will be output on the Matlab command window and the text file will not be generated. If this happens, please re-take the pictures and re-try. This is unlikely to happen if the pictures are taken as instructed in step 1.
 
 5. Go to Solver and make to generate the .o files and the executable for the solver.
 
