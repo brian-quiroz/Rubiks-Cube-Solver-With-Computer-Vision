@@ -41,7 +41,7 @@ The C++ program should now output the scrambled cube, each step it performed, an
 The C++ program should now output the scrambled cube, each step it performed, and a series of steps you can use to solve the cube in that state.
     
 ## Further Documentation
-This project is a combination of two separate projects the detector and the solver. I added some code to make them work together in this repository.
+This project is a combination of two separate projects: the detector and the solver. I edited some code on both projects and added some new code on the solver to make them work together in this repository.
 To learn more about each, you can view the code for each component in their respective repository:
 - Detector: https://github.com/brianquiroz216/Rubiks-Cube-Recognition-and-Color-Classification
 - Solver: https://github.com/brianquiroz216/Rubiks-Cube-Solver
