@@ -2,8 +2,8 @@
 Given an image of each face of a Rubik's cube, detect the cube, classify its stickers' colors, and output a solution algorithm
 
 ## Instructions
-- Two options:
-    - Use the Matlab program to detect the cube configuration and pass it on to the solver program (auto scramble)
+- There are two ways of running this program:
+    - Use the detector program to determine the cube configuration and pass it on to the solver program (auto scramble)
     - Input your own scramble algorithm to the solver program (manual scramble)
 
 ## Auto Scramble
@@ -19,7 +19,7 @@ Given an image of each face of a Rubik's cube, detect the cube, classify its sti
 
 3. Go to Detector/CVRubiksCube.m and change "ExampleSet" on line 2 for your folder's name.
 
-4. Open MATLAB and run the CVRubiksCube.m script in the Detector folder. This should output a file called "stickers.txt" in that folder.
+4. Open MATLAB and run the CVRubiksCube.m script in the Detector folder. This should create a file called "stickers.txt" in that folder.
 
 5. Go to Solver and make to generate the .o files and the executable for the solver.
 
@@ -34,4 +34,10 @@ Given an image of each face of a Rubik's cube, detect the cube, classify its sti
     `./RubiksCubeSolver manual`
     
     The C++ program should now output the scrambled cube, each step it performed, and a series of steps you can use to solve the cube in that state.
+    
+## Further Documentation
+This project is a combination of two separate projects the detector and the solver. I added some code to make them work together in this repository.
+To learn more about each, you can view the code for each component in their respective repository:
+- Detector: https://github.com/brianquiroz216/Rubiks-Cube-Recognition-and-Color-Classification
+- Solver: https://github.com/brianquiroz216/Rubiks-Cube-Solver
 
