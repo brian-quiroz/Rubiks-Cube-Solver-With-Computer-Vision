@@ -1,5 +1,5 @@
-# Rubiks-Cube-Solver-With-Computer-Vision
-Given an image of each face of a Rubik's cube, detect the cube, classify its stickers' colors, and output a solution algorithm
+# Rubiks Cube Solver With Computer Vision
+Given an image of each face of a Rubik's cube, detect the cube, classify its stickers' colors, and output a solution algorithm.
 
 ## Instructions
 - There are two ways of running this program:
