@@ -24,7 +24,7 @@ For optimal detection, the pictures should be taken very close to the cube, with
 #### 3. Go to Detector/CVRubiksCube.m and change "ExampleSet" on line 2 for your folder's name.
 
 #### 4. Open MATLAB and run the CVRubiksCube.m script in the Detector folder. This should create a file called "stickers.txt" in that folder.  
-  If the cube cannot be detected correctly, an error will be output on the Matlab command window and the text file will not be generated. If this happens, please re-take the pictures and re-try. This is unlikely to happen if the pictures are taken as instructed in step 1.
+See Detector/stickers-exampleSet.txt for an example of what the output file should look like. If the cube cannot be detected correctly, an error will be output on the Matlab command window and the text file will not be generated. If this happens, please re-take the pictures and re-try. This is unlikely to happen if the pictures are taken as instructed in step 1.
 
 #### 5. Go to Solver and make to generate the .o files and the executable for the solver.
 
