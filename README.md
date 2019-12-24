@@ -28,14 +28,14 @@ Note: An example image set is provided. To run a sample run, skip steps 1-3.
 ### 5. Go to Solver and make to generate the .o files and the executable for the solver.
 
 ### 6. On the command line, run:
-    `./RubiksCubeSolver auto`
+    `./RubiksCubeSolver auto`  
     
     The C++ program should now output the scrambled cube, each step it performed, and a series of steps you can use to solve the cube in that state.
  
 ## Manual Scramble
 ### 1. Go to Solver and make to generate the .o files and the executable for the solver.
 ### 2. On the command line, run:
-    `./RubiksCubeSolver manual`
+    `./RubiksCubeSolver manual`  
     
     The C++ program should now output the scrambled cube, each step it performed, and a series of steps you can use to solve the cube in that state.
     
