@@ -16,6 +16,7 @@ Note: An example image set is provided. To run a sample run, skip steps 1-3.
 - red face: Img4.jpg
 - green face: Img5.jpg
 - white face: Img6.jpg  
+
 For optimal detection, the pictures should be taken very close to the cube, with little to no background noise, and under good lighting (see example images on Detector/Images/ExampleSet). To learn more about the robustness of the detector algorithm please refer to the documentation for the detector under the Further Documentation section.
 
 #### 2. Store the folder containing these images under Detector/Images.
@@ -28,16 +29,16 @@ For optimal detection, the pictures should be taken very close to the cube, with
 #### 5. Go to Solver and make to generate the .o files and the executable for the solver.
 
 #### 6. On the command line, run:
-    `./RubiksCubeSolver auto`  
+`./RubiksCubeSolver auto`  
     
-    The C++ program should now output the scrambled cube, each step it performed, and a series of steps you can use to solve the cube in that state.
+The C++ program should now output the scrambled cube, each step it performed, and a series of steps you can use to solve the cube in that state.
  
 ## Manual Scramble
-### 1. Go to Solver and make to generate the .o files and the executable for the solver.
-### 2. On the command line, run:
-    `./RubiksCubeSolver manual`  
+#### 1. Go to Solver and make to generate the .o files and the executable for the solver.
+#### 2. On the command line, run:
+`./RubiksCubeSolver manual`  
     
-    The C++ program should now output the scrambled cube, each step it performed, and a series of steps you can use to solve the cube in that state.
+The C++ program should now output the scrambled cube, each step it performed, and a series of steps you can use to solve the cube in that state.
     
 ## Further Documentation
 This project is a combination of two separate projects the detector and the solver. I added some code to make them work together in this repository.
