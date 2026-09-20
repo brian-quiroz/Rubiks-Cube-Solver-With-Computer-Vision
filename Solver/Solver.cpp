@@ -170,6 +170,8 @@ void Solver::manualScramble(std::string userAlgorithm) {
 			Bp();
 		} else if (scramblerAlg.peekFront() == "E'") {
 			Ep();
+		} else if (scramblerAlg.peekFront() == "F2") {
+			F2();
 		} else if (scramblerAlg.peekFront() == "R2") {
 			R2();
 		} else if (scramblerAlg.peekFront() == "U2") {
@@ -208,6 +210,7 @@ void Solver::identifyPieces(char** c) {
 	std::vector<std::vector<char>> cornersGiven = {{c[0][0], c[1][0], c[4][2]},
 						       {c[0][2], c[3][2], c[4][0]},
 						       {c[0][6], c[1][2], c[2][0]},
+						       {c[0][8], c[2][2], c[3][0]},
 						       {c[5][0], c[1][8], c[2][6]},
 						       {c[5][2], c[2][8], c[3][6]},
 						       {c[5][6], c[1][6], c[4][8]},
