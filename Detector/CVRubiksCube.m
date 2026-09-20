@@ -1,5 +1,12 @@
-function CVRubiksCube()
-    run("ExampleSet", 0.25);
+% Usage: CVRubiksCube()  or  CVRubiksCube("MyImageSet")  or  CVRubiksCube("MyImageSet", 0.3)
+function CVRubiksCube(setName, t)
+    if nargin < 1
+        setName = "ExampleSet";
+    end
+    if nargin < 2
+        t = 0.25;
+    end
+    run(setName, t);
 end
 
 function run(setN, t)
@@ -11,6 +18,10 @@ function run(setN, t)
     
     disp("Starting run...");
     
+    if ~exist("CroppedImages", "dir")
+        mkdir("CroppedImages");
+    end
+
     for l = 1:6
         fileName = "Images/" + setN + "/Img" + l + ".jpg";
         I = imread(fileName);
