@@ -25,7 +25,7 @@ int Queue<T>::getLength() {
 }
 
 template <typename T>
-void Queue<T>::enqueue(const T value) throw(PreconditionViolationException) {
+void Queue<T>::enqueue(const T value) {
 	Node<T>* temp = new Node<T>(value);
 	Node<T>* jumper = q_front;
 	if (isEmpty()) {
@@ -40,7 +40,7 @@ void Queue<T>::enqueue(const T value) throw(PreconditionViolationException) {
 }
 
 template <typename T>
-void Queue<T>::dequeue() throw(PreconditionViolationException) {
+void Queue<T>::dequeue() {
 	Node<T>* temp = nullptr;
 	if (isEmpty()) {
 		throw(PreconditionViolationException("Error. Dequeue attempted on an empty queue!\n"));
@@ -53,7 +53,7 @@ void Queue<T>::dequeue() throw(PreconditionViolationException) {
 }
 
 template <typename T>
-T Queue<T>::peekFront() const throw(PreconditionViolationException) {
+T Queue<T>::peekFront() const {
 	if (isEmpty()) {
 		throw(PreconditionViolationException("Error. PeekFront attempted on an empty queue!\n"));
 	} else {

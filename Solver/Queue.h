@@ -11,9 +11,9 @@ class Queue {
 		~Queue();
 		bool isEmpty() const;
 		int getLength();
-		void enqueue(const T value) throw(PreconditionViolationException);
-		void dequeue() throw(PreconditionViolationException);
-		T peekFront() const throw(PreconditionViolationException);
+		void enqueue(const T value);
+		void dequeue();
+		T peekFront() const;
 	private:
 		Node<T>* q_front;
 		int q_length;

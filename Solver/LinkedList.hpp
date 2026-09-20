@@ -70,7 +70,7 @@ void LinkedList<T>::insertAt(int pos, T value) {
 }
 
 template <typename T>
-void LinkedList<T>::removeFront() throw(PreconditionViolationException) {
+void LinkedList<T>::removeFront() {
 	if (isEmpty()) {
 		throw(PreconditionViolationException("Error! removeFront attempted on an empty list!\n"));
 	} else {
@@ -82,7 +82,7 @@ void LinkedList<T>::removeFront() throw(PreconditionViolationException) {
 }
 
 template <typename T>
-void LinkedList<T>::removeBack() throw(PreconditionViolationException) {
+void LinkedList<T>::removeBack() {
 	if (isEmpty()) {
 		throw(PreconditionViolationException("Error! removeBack attempted on an empty list!\n"));
 	} else if (m_length == 1) {
@@ -101,7 +101,7 @@ void LinkedList<T>::removeBack() throw(PreconditionViolationException) {
 }
 
 template <typename T>
-void LinkedList<T>::removeAt(int position) throw(PreconditionViolationException) {
+void LinkedList<T>::removeAt(int position) {
 	if ((isEmpty()) || (position < 1) || (position > getLength())) {
 		throw(PreconditionViolationException("Error! removeAt attempted on an empty list or position out of range!\n"));
 	} else if (position == 1) {
@@ -118,7 +118,7 @@ void LinkedList<T>::removeAt(int position) throw(PreconditionViolationException)
 }
 
 template <typename T>
-T LinkedList<T>::getEntry(int pos) const throw(PreconditionViolationException) {
+T LinkedList<T>::getEntry(int pos) const {
 	Node<T>* temp = m_front;
 	if (pos < 1 || pos > m_length) {
 		throw(PreconditionViolationException("Error! getEntry attempted on an empty list or position out of range!\n"));
