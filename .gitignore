@@ -1,0 +1,11 @@
+# Solver build artifacts
+Solver/*.o
+Solver/RubiksCubeSolver
+Solver/*.dSYM/
+
+# Detector runtime output
+Detector/stickers.txt
+Detector/CroppedImages/
+
+# OS / editor
+.DS_Store
