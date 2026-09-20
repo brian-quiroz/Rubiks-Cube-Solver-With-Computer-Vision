@@ -97,19 +97,33 @@ void Solver::autoScramble(std::string filename) {
 	std::ifstream inFile;
 
 	inFile.open(filename);
+	if (!inFile.is_open()) {
+		throw std::runtime_error("Could not open sticker file " + filename);
+	}
 
 	colors = new char*[6];
 	for (int i = 0; i < 6; i++) {
 		colors[i] = new char[9];
 	}
 
+	//Every sticker must be one of Y O B R G W, and a real cube has exactly 9 of each.
+	std::unordered_map<char, int> colorCount = {{'Y', 0}, {'O', 0}, {'B', 0}, {'R', 0}, {'G', 0}, {'W', 0}};
 	for (int i = 0; i < 6; i++) {
 		for (int j = 0; j < 9; j++) {
-			inFile >> colors[i][j];
+			if (!(inFile >> colors[i][j]) || colorCount.find(colors[i][j]) == colorCount.end()) {
+				throw std::runtime_error("Sticker file " + filename + " must contain 6 lines of 9 colors (Y O B R G W)");
+			}
+			colorCount[colors[i][j]]++;
 		}
 	}
 
 	inFile.close();
+
+	for (const auto& entry : colorCount) {
+		if (entry.second != 9) {
+			throw std::runtime_error(std::string("Sticker file is not a valid cube: found ") + std::to_string(entry.second) + " " + entry.first + " stickers, expected 9");
+		}
+	}
 
 	identifyPieces(colors);
 
@@ -230,10 +244,16 @@ void Solver::identifyPieces(char** c) {
 
 	for (unsigned int i = 0; i < cornersGiven.size(); i++) {
 		std::tie(cornersIndexes[i], cornersPerm[i]) = identifyCorner(cornersGiven[i]);
+		if (cornersIndexes[i] == -1) {
+			throw std::runtime_error(std::string("Corner with stickers ") + cornersGiven[i][0] + cornersGiven[i][1] + cornersGiven[i][2] + " does not exist on a real cube (misclassified sticker?)");
+		}
 	}
 
 	for (unsigned int i = 0; i < edgesGiven.size(); i++) {
 		std::tie(edgesIndexes[i], edgesPerm[i]) = identifyEdge(edgesGiven[i]);
+		if (edgesIndexes[i] == -1) {
+			throw std::runtime_error(std::string("Edge with stickers ") + edgesGiven[i][0] + edgesGiven[i][1] + " does not exist on a real cube (misclassified sticker?)");
+		}
 	}
 
 	std::unordered_map<int, int> old2NewStickers;

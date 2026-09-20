@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <utility>
 #include <unordered_map>
+#include <stdexcept>
 
 #include "Piece.h"
 #include "Queue.h"
