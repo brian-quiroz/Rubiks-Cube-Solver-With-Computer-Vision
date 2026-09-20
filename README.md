@@ -150,7 +150,7 @@ face turns alone cannot undo.
    which one so you can retake it.
 
    To check your MATLAB setup first, run `CVRubiksCube()` with no arguments. It processes the
-   example set, and the `stickers.txt` it writes should match `stickers-exampleSet.txt` exactly.
+   example set, and the `stickers.txt` it writes should match `stickers-exampleSet.txt`.
 
 4. Solve it (using the solver built in the section above):
 
