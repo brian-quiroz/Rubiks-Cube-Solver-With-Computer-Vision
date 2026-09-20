@@ -7,5 +7,8 @@ Solver/*.dSYM/
 Detector/stickers.txt
 Detector/CroppedImages/
 
+# Python bytecode (tools/)
+__pycache__/
+
 # OS / editor
 .DS_Store
