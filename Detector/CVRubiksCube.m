@@ -76,7 +76,7 @@ function run(setN, t)
         fclose(fileID);
         disp("Program ran successfully!");
     else
-        disp("Cant fit square! MSE of " + mse + " is too large!");
+        disp("Could not find the cube in Images/" + setN + "/Img" + l + ".jpg (corner fit error " + mse + ", limit 10000). Retake that photo with the cube centered, edges parallel to the frame, on a light background.");
     end
     disp(" ");
 end
