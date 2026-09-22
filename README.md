@@ -1,4 +1,4 @@
-# Rubik's Cube Solver With Computer Vision
+# Rubik's Cube Detector and Solver
 
 Take six photos of a scrambled Rubik's cube, one per face. A MATLAB script finds the cube in each
 photo and reads the color of every sticker. A C++ program rebuilds the cube from those colors and
