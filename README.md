@@ -4,7 +4,9 @@ Take six photos of a scrambled Rubik's cube, one per face. A MATLAB script finds
 photo and reads the color of every sticker. A C++ program rebuilds the cube from those colors and
 prints a sequence of moves that solves it.
 
-<!-- TODO: demo recording and terminal screenshot go here (docs/media/) -->
+<video src="docs/media/demo.mov" controls width="600"></video>
+
+![Solved cube output in the terminal](docs/media/results.png)
 
 ## Background
 
